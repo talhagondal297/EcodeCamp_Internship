@@ -1,0 +1,52 @@
+<!-- calculator/templates/calculator/calculator.html -->
+ {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="{% static 'calculator/styles.css' %}">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Calculator</h1>
+        <div class="calculator">
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" name="display" value="{{ display }}" readonly>
+                <br>
+                <button type="submit" name="button" value="1">1</button>
+                <button type="submit" name="button" value="2">2</button>
+                <button type="submit" name="button" value="3">3</button>
+                <button type="submit" name="button" value="+">+</button>
+                <br>
+                <button type="submit" name="button" value="4">4</button>
+                <button type="submit" name="button" value="5">5</button>
+                <button type="submit" name="button" value="6">6</button>
+                <button type="submit" name="button" value="-">-</button>
+                <br>
+                <button type="submit" name="button" value="7">7</button>
+                <button type="submit" name="button" value="8">8</button>
+                <button type="submit" name="button" value="9">9</button>
+                <button type="submit" name="button" value="*">*</button>
+                <br>
+                 <!-- Row 4 -->
+                <button type="submit" name="button" value="0">0</button>
+                <button type="submit" name="button" value="00">00</button>
+                <button type="submit" name="button" value=".">.</button>
+                <button type="submit" name="button" value="/">/</button>
+                <br>
+                <!-- Row 5 -->
+                <button type="submit" name="button" value="=" class="equal">=</button>
+                <button type="submit" name="button" value="⌫">⌫</button>
+                <button type="submit" name="button" value="C">C</button>
+            </form>
+            {% if error %}
+                <p>Error: {{ error }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
