@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="appbar">
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1>ALL TASK</h1>
+        <img src="{% static 'images/favicon.png' %}" alt="Favicon" class="favicon">
+    </div>
+    <div class="container">
+        {% if tasks %}
+            <ul>
+                {% for task in tasks %}
+                <li>{{ task.name }} <a href="{% url 'remove_task' task.id %}">Remove</a></li>
+                {% endfor %}
+            </ul>
+            <form method="POST" action="{% url 'delete_all_tasks' %}">
+                {% csrf_token %}
+                <button type="submit" class="delete-btn">Delete All Tasks</button>
+            </form>
+        {% else %}
+            <p style="color: black;">Your tasks will show here</p>
+        {% endif %}
+        <form method="POST" action="{% url 'add_task' %}" class="add-task-form">
+            {% csrf_token %}
+            <input type="text" name="task" placeholder="Enter the Task">
+            <button type="submit" class="add-btn">+</button>
+        </form>
+    </div>
+</body>
+</html>

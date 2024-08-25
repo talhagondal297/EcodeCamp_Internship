@@ -1,0 +1,140 @@
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #121029; 
+}
+
+/* Updated AppBar styling */
+.appbar {
+    width: 390px;
+    background-color: #9012af;
+    color: white;
+    padding: 25px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-icon {
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: white;
+    margin: 6px 0;
+}
+
+.appbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.appbar .favicon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+}
+
+/* Main container */
+.container {
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 10px 10px;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+}
+
+ul li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li a {
+    color: red;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Add task form  */
+.add-task-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.add-task-form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #9012af;
+    border-radius: 4px;
+    background-color: #f3f3f3;
+    color: black;
+}
+
+.add-btn {
+    padding: 10px 15px;
+    background-color: #9012af;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.add-btn:hover {
+    background-color: #0d1368;
+}
+
+/* Delete All Tasks Button */
+.delete-btn {
+    width: 100%;
+    background-color: rgb(154, 12, 189);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.delete-btn:hover {
+    background-color: #0d1368;
+}
+
