@@ -1,0 +1,48 @@
+{% extends 'Quiz/dependencies.html' %}
+
+{% block content %}
+{% load static %}
+<div class="container quiz-container">
+    {% if error_message %}
+    <br>
+    <div class="alert alert-warning" role="alert">
+        {{ error_message }}
+    </div>
+    {% endif %}
+    <br>
+    
+    <h1>Welcome to Python Quiz</h1>
+    <div align="right" id="displaytimer"><b>Timer: 0 seconds</b></div>
+
+    
+
+    <form method='post' action=''>
+        {% csrf_token %}
+        {% for q in questions %}
+        <div class="form-group">
+            <label for="question"><strong>{{ q.question }}</strong></label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{ q.question }}" id="gridRadios1" value="{{ q.op1 }}">
+            <label class="form-check-label" for="gridRadios1">{{ q.op1 }}</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{ q.question }}" id="gridRadios2" value="{{ q.op2 }}">
+            <label class="form-check-label" for="gridRadios2">{{ q.op2 }}</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{ q.question }}" id="gridRadios3" value="{{ q.op3 }}">
+            <label class="form-check-label" for="gridRadios3">{{ q.op3 }}</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{ q.question }}" id="gridRadios4" value="{{ q.op4 }}">
+            <label class="form-check-label" for="gridRadios4">{{ q.op4 }}</label>
+        </div>
+        <br>
+        {% endfor %}
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+</div>
+{% endblock %}

@@ -1,0 +1,201 @@
+/* Navbar styling */
+.navbar {
+    display: flex;
+    padding: 1rem; /* Adjust padding for navbar height */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    background-color: #6a1b9a; /* Purple background color */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Styling for the collapsible content */
+.navbar-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally within the collapsible area */
+}
+
+/* Navbar items styling */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+}
+
+/* Margin for navbar items */
+.navbar-nav .nav-item {
+    margin: 0 15px; /* Space between nav items */
+}
+
+/* Styling for navbar links */
+.navbar-nav .nav-link {
+    color: white; /* White color for the links */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Hover effect for navbar links */
+.navbar-nav .nav-link:hover {
+    color: #e0e0e0; /* Lighter shade on hover */
+}
+
+/* Styling for text elements in the navbar */
+.navbar-text {
+    font-weight: bold;
+    color: white; /* White text color */
+}
+
+/* Center the quiz container */
+.quiz-container {
+    max-width: 800px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Add margin to the questions and options */
+.question-container {
+    margin: 20px 0; /* Margin top and bottom */
+    padding: 0 20px; /* Padding left and right */
+}
+
+.option-container {
+    margin: 10px 0; /* Margin top and bottom */
+    padding: 0 20px; /* Padding left and right */
+}
+
+/* Ensure the result container is centered */
+.result-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    padding: 20px; /* Padding around the container */
+}
+
+/* Styling for the result card */
+.result-card {
+    border: 5px solid black; /* Border around the card */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    margin: 20px; /* Margin around the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    width: 100%; /* Make sure the card uses full width available */
+    max-width: 600px; /* Maximum width for the card */
+}
+
+/* Add margin to text elements inside the card */
+.result-title,
+.result-text,
+.result-footer {
+    margin-bottom: 15px; /* Space between text elements */
+}
+
+/* Optional: Remove bottom margin from the last element */
+.result-footer {
+    margin-bottom: 0;
+}
+
+.alert-warning {
+    color: white; /* Text color */
+    background-color: red; /* Background color */
+    border-color: darkred; /* Border color */
+    margin-bottom: 20px; /* Space below the alert */
+}
+
+/* Full-height container for centering content */
+.full-height {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the card container */
+.card.box-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 2rem; /* Add padding inside the card */
+    width: 100%;
+    max-width: 400px; /* Ensure the card is not too wide */
+    margin: 0 auto; /* Center the card horizontally */
+}
+
+/* Ensure proper centering within card */
+.card-body {
+    padding: 2rem;
+}
+
+/* Styling for form inputs */
+.form-input {
+    padding: 10px; /* Increase padding inside input fields */
+    font-size: 1rem; /* Increase font size inside input fields */
+    width: 100%; /* Ensure input fields use full width */
+}
+
+/* Styling for buttons */
+.btn {
+    padding: 10px 20px; /* Adjust padding for button size */
+    font-size: 1rem; /* Set font size for button text */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text inside the button */
+}
+
+/* Button specific to success actions */
+.btn-success {
+    background-color: #28a745; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Button specific to primary actions */
+.btn-primary {
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for register and login forms */
+.register-form, .login-form {
+    padding: 2rem; /* Padding inside the form */
+}
+
+/* Add margin between form fields */
+.form-group {
+    margin-bottom: 1rem; /* Space between form fields */
+}
+
+/* Adjust button size in forms */
+.btn-block {
+    width: 100%; /* Full width for the button */
+    padding: 10px; /* Adjust padding for button size */
+    font-size: 1rem; /* Set font size for button text */
+}
+
+/* Styling for register card container */
+.register-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 2rem; /* Add padding inside the card */
+    width: 100%;
+    max-width: 400px; /* Ensure the card is not too wide */
+    margin: 0 auto; /* Center the card horizontally */
+}
+
+/* Center the container vertically and horizontally */
+.full-height {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

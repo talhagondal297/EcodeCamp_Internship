@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+    <head>
+        <title>
+            Python Online Quiz
+        </title>
+        <link rel="stylesheet" href="{% static 'Quiz/styles.css' %}">
+    </head>
+    <body>        
+        {% include 'Quiz/navbar.html' %}
+        {% block content %}   
+        {% endblock %}
+        <br>
+       
+        <script src="{% static 'Quiz/script.js' %}"></script>
+    </body>
+</html>
