@@ -1,0 +1,10 @@
+{% extends 'contacts/base.html' %}
+{% block content %}
+    <h2>Confirm Update</h2>
+    <form method="POST">
+        {% csrf_token %}
+        
+        <button type="submit" name="confirm" value="yes" class="btn btn-success">Yes</button>
+        <button type="submit" name="confirm" value="no" class="btn btn-danger">No</button>
+    </form>
+{% endblock %}

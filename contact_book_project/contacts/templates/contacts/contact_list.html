@@ -1,0 +1,43 @@
+{% extends 'contacts/base.html' %}
+
+{% block content %}
+    <!-- Display success or error messages -->
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- Contacts Heading -->
+    {% if contacts %}
+        <h2>My Contacts</h2>
+    {% endif %}
+
+    <!-- Search Form -->
+    <form class="search-form" method="GET" action="{% url 'contact_list' %}">
+        <input type="text" name="q" class="form-input" placeholder="Search Contacts" value="{{ request.GET.q }}">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <!-- Contacts List -->
+    {% if contacts %}
+        <ul>
+            {% for contact in contacts %}
+                <li>
+                    {{ contact.first_name }} {{ contact.last_name }} - {{ contact.phone }}
+                    <div>
+                        <a href="{% url 'contact_update' contact.pk %}" class="btn btn-update">Update</a>
+                        <a href="{% url 'contact_delete' contact.pk %}" class="btn btn-delete">Delete</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No contacts found.</p>
+    {% endif %}
+
+    <!-- Add New Contact Button -->
+    <a href="{% url 'contact_create' %}" class="btn btn-primary">Add New Contact</a>
+{% endblock %}
